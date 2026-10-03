@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Streezy — Privacy Policy</title>
+  <meta name="description" content="Streezy collects nothing about you. No telemetry, no account. This page lists every connection Streezy makes and why.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#f2efe7; --paper-2:#e9e5da; --ink:#16181c; --ink-2:#4a4d55; --line:#d9d4c7;
+      --signal:#2553f5; --lit:#9bd33c; --lit-ink:#3f6b0c; --card:#faf8f3; --good:#1f8a4c;
+    }
+    @media (prefers-color-scheme:dark){
+      :root{
+        --paper:#16181c; --paper-2:#1f2227; --ink:#f2efe7; --ink-2:#b3b0a8; --line:#2e3239;
+        --signal:#5b7cff; --lit:#9bd33c; --lit-ink:#b5e36a; --card:#1c1f24; --good:#3fbf74;
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--paper); color:var(--ink);
+      font:17px/1.65 "Bricolage Grotesque",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--signal)}
+    .wrap{max-width:780px; margin:0 auto; padding:0 16px 72px}
+    nav{padding:20px 0}
+    nav a{display:inline-flex; align-items:center; gap:10px; font-weight:800; color:var(--ink); text-decoration:none}
+    nav svg{width:30px; height:30px}
+
+    header{padding:40px 0 12px}
+    .eyebrow{font-size:.8rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--lit-ink)}
+    h1{font-size:clamp(2.2rem,6vw,3.2rem); line-height:1.05; letter-spacing:-.03em; margin:10px 0 14px; font-weight:800}
+    .sub{color:var(--ink-2); font-size:1.12rem; margin:0}
+    .updated{display:inline-block; margin-top:18px; font-size:.85rem; color:var(--ink-2);
+      border:1px solid var(--line); border-radius:999px; padding:5px 14px; background:var(--card)}
+
+    .badges{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:32px 0 8px}
+    .badge{background:var(--card); border:1.5px solid var(--ink); border-radius:14px; padding:18px 16px}
+    .badge b{display:block; font-size:1.02rem}
+    .badge span{color:var(--ink-2); font-size:.88rem}
+
+    .card{background:var(--card); border:1.5px solid var(--line); border-radius:14px; padding:24px 26px; margin-top:18px}
+    .card h2{font-size:1.2rem; margin:0 0 10px; letter-spacing:-.01em}
+    .card p{margin:0 0 10px}
+    .card p:last-child{margin-bottom:0}
+    ul{margin:6px 0 0; padding:0; list-style:none}
+    li{position:relative; padding:8px 0 8px 26px; border-top:1px solid var(--line)}
+    li:first-child{border-top:0}
+    li::before{content:""; position:absolute; left:2px; top:17px; width:10px; height:10px; border-radius:3px; background:var(--signal)}
+    .good li::before{background:var(--good)}
+    code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:.86em; background:var(--paper-2);
+      padding:1px 6px; border-radius:6px; word-break:break-all}
+
+    footer{margin-top:44px; padding-top:22px; border-top:1px solid var(--line); color:var(--ink-2); font-size:.9rem}
+    footer a{color:var(--ink-2)}
+    @media (max-width:600px){ .badges{grid-template-columns:1fr} .card{padding:20px 18px} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" aria-label="Streezy home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#16181c"/><g transform="translate(14 14) scale(.5625)"><path d="M13 13L51 32L13 51Z" fill="none" stroke="#f2efe7" stroke-width="10" stroke-linejoin="round"/><rect x="2" y="2" width="22" height="22" rx="6" fill="#f2efe7"/><rect x="2" y="40" width="22" height="22" rx="6" fill="#f2efe7"/><rect x="40" y="21" width="22" height="22" rx="6" fill="#9bd33c"/><circle cx="51" cy="32" r="4.5" fill="#16181c"/></g></svg>
+        Streezy
+      </a>
+    </nav>
+
+    <header>
+      <span class="eyebrow">Privacy policy</span>
+      <h1>Streezy collects nothing about you.</h1>
+      <p class="sub">Streezy is a streaming app, so it does connect to the internet: to the places you stream to and the chats
+        you add. This page lists every connection it makes, and nothing else is sent anywhere.</p>
+      <span class="updated">Last updated 3 October 2026</span>
+    </header>
+
+    <section class="badges" aria-label="Privacy highlights">
+      <div class="badge"><b>No telemetry</b><span>No analytics, crash reporting or tracking</span></div>
+      <div class="badge"><b>No account</b><span>Nothing to sign up for or log in to</span></div>
+      <div class="badge"><b>Keys stay local</b><span>Stream keys live in Windows Credential Manager</span></div>
+    </section>
+
+    <div class="card">
+      <h2>What Streezy is</h2>
+      <p>Streezy is a desktop streaming app for Windows made by Faisal Malik at zylio. It runs on your computer and is
+        built on the OBS Studio engine. zylio runs no server for it: there is no Streezy account, cloud or backend.</p>
+    </div>
+
+    <div class="card">
+      <h2>Every connection Streezy makes</h2>
+      <ul>
+        <li><strong>Your streams.</strong> When you go live, Streezy sends your video and sound to the servers of the platforms
+          you added (for example Twitch, YouTube or Kick), using the stream keys you gave it. Those platforms' own privacy
+          policies apply to what you stream.</li>
+        <li><strong>Chat you add.</strong> If you enter a channel name on the Chat page, Streezy reads that channel's public chat:
+          Twitch chat (<code>irc-ws.chat.twitch.tv</code>), Kick chat (<code>kick.com</code> and its chat service
+          <code>ws-us2.pusher.com</code>) and YouTube live chat (<code>www.youtube.com</code>). Reading needs no login. If you
+          paste a Twitch chat token to send messages, it is used only with Twitch.</li>
+        <li><strong>The internet check, when you run it.</strong> Streezy uploads random test data to Cloudflare's speed test
+          (<code>speed.cloudflare.com</code>) for about ten seconds to measure your upload. It runs only when you press the
+          button, in the setup or in Settings.</li>
+        <li><strong>Checking for updates, once at start-up.</strong> Streezy asks GitHub
+          (<code>api.github.com/repos/faisalrasheed442/streezy-releases/releases/latest</code>) whether a newer version
+          exists. The request carries no cookies and no identifier; its User-Agent says only <code>Streezy/&lt;version&gt;</code>.
+          GitHub sees your IP address, as it does for any visit, under
+          <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.
+          Nothing is downloaded until you click, and an update is checked against its published checksum before it runs.
+          You can switch the check off in <strong>Settings › Privacy</strong>.</li>
+        <li><strong>Web pages you add to a scene.</strong> A browser source or overlay loads whatever address you give it, like
+          a web browser would. Streezy's built-in overlays load only from your own computer.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>What Streezy opens on your own network</h2>
+      <ul>
+        <li><strong>Overlays</strong> are served from your PC to your PC only (port 17887). Other devices cannot open them.</li>
+        <li><strong>The phone remote</strong> can be opened by devices on your home network and needs your PIN. You can switch
+          it off, or change the PIN, on the Remote page.</li>
+        <li><strong>The remote port for Stream Deck and OBS tools</strong> (port 4455) needs its password. You can switch it off
+          on the Remote page.</li>
+      </ul>
+    </div>
+
+    <div class="card good">
+      <h2>What Streezy never does</h2>
+      <ul>
+        <li>Send usage statistics, crash reports, analytics or any identifier to zylio or anyone else.</li>
+        <li>Upload your recordings, clips or scenes anywhere. They stay in your Videos folder.</li>
+        <li>Show ads, or share or sell any information with anyone.</li>
+        <li>Store your stream keys in a plain file. They go into Windows Credential Manager.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>What stays on your computer</h2>
+      <p>Streezy keeps its settings, scene collections, stream reports and logs in <code>%APPDATA%\Streezy</code>, and your
+        recordings and clips in <code>Videos\Streezy</code>. Only you can see them. Logs never leave your computer unless you
+        choose to send one to us yourself; the stream doctor's support report leaves out keys and passwords.</p>
+    </div>
+
+    <div class="card">
+      <h2>Contacting us</h2>
+      <p>If you email us for support, we use your message only to answer it. We never ask for your stream keys; if you share
+        a log to show a problem, it is deleted once the problem is fixed.</p>
+    </div>
+
+    <footer>
+      Questions about this policy? <a href="mailto:support@zylio.net">support@zylio.net</a><br>
+      © 2026 zylio · Faisal Malik · <a href="index.html">Streezy</a>
+    </footer>
+  </div>
+</body>
+</html>

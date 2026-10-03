@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Streezy — free streaming studio</title>
+  <meta name="description" content="Streezy is a free streaming app for Windows on the OBS engine. Go live on Twitch, YouTube, Kick and TikTok at once, horizontal and vertical, with alerts, chat and overlays. No watermark, no subscription.">
+  <meta property="og:title" content="Streezy — go live everywhere. Free.">
+  <meta property="og:description" content="Stream to Twitch, YouTube, Kick and TikTok at once. Built on the OBS engine. No watermark, no subscription, no account.">
+  <meta property="og:image" content="images/streezy-og.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2316181c'/%3E%3Cg transform='translate(14 14) scale(.5625)'%3E%3Cpath d='M13 13L51 32L13 51Z' fill='none' stroke='%23f2efe7' stroke-width='10' stroke-linejoin='round'/%3E%3Crect x='2' y='2' width='22' height='22' rx='6' fill='%23f2efe7'/%3E%3Crect x='2' y='40' width='22' height='22' rx='6' fill='%23f2efe7'/%3E%3Crect x='40' y='21' width='22' height='22' rx='6' fill='%239bd33c'/%3E%3Ccircle cx='51' cy='32' r='4.5' fill='%2316181c'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#f2efe7; --paper-2:#e9e5da; --ink:#16181c; --ink-2:#4a4d55; --line:#d9d4c7;
+      --signal:#2553f5; --lit:#9bd33c; --lit-ink:#3f6b0c; --card:#faf8f3; --on-signal:#ffffff;
+    }
+    @media (prefers-color-scheme:dark){
+      :root{
+        --paper:#16181c; --paper-2:#1f2227; --ink:#f2efe7; --ink-2:#b3b0a8; --line:#2e3239;
+        --signal:#5b7cff; --lit:#9bd33c; --lit-ink:#b5e36a; --card:#1c1f24; --on-signal:#ffffff;
+      }
+      .brand svg{border-radius:8px; box-shadow:0 0 0 1px var(--line)}
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--paper); color:var(--ink);
+      font:17px/1.6 "Bricolage Grotesque",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--signal)}
+    .wrap{max-width:1120px; margin:0 auto; padding:0 16px 72px}
+
+    nav{display:flex; align-items:center; justify-content:space-between; padding:20px 0}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.15rem;
+      color:var(--ink); text-decoration:none; letter-spacing:-.01em}
+    .brand svg{width:32px; height:32px}
+    nav .links{display:flex; gap:20px; font-size:.95rem}
+    nav .links a{color:var(--ink-2); text-decoration:none}
+    nav .links a:hover{color:var(--ink)}
+
+    header{padding:56px 0 40px; display:grid; grid-template-columns:.9fr 1.1fr; gap:44px; align-items:center}
+    .eyebrow{display:inline-block; font-size:.8rem; font-weight:600; letter-spacing:.08em;
+      text-transform:uppercase; color:var(--lit-ink); margin-bottom:14px}
+    h1{font-size:clamp(2.4rem,6vw,4.2rem); line-height:1.02; letter-spacing:-.035em;
+      font-weight:800; margin:0 0 20px}
+    h1 em{font-style:normal; box-shadow:inset 0 -.32em 0 var(--lit)}
+    .lede{font-size:1.18rem; color:var(--ink-2); max-width:30em; margin:0 0 30px}
+    .cta{display:flex; flex-wrap:wrap; gap:12px}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:14px 22px; border-radius:12px;
+      font-weight:600; font-size:1rem; text-decoration:none; border:1.5px solid var(--ink);
+      transition:transform .12s ease, box-shadow .12s ease}
+    .btn.primary{background:var(--signal); border-color:var(--signal); color:var(--on-signal);
+      box-shadow:0 3px 0 var(--ink)}
+    .btn.primary:hover{transform:translateY(-1px); box-shadow:0 4px 0 var(--ink)}
+    .btn.primary:active{transform:translateY(2px); box-shadow:0 1px 0 var(--ink)}
+    .btn.ghost{color:var(--ink); background:transparent}
+    .btn.ghost:hover{background:var(--paper-2)}
+    .btn svg{width:18px; height:18px}
+    .platforms{margin-top:16px; font-size:.9rem; color:var(--ink-2)}
+
+    .shot{display:block; width:100%; height:auto; border:1.5px solid var(--ink); border-radius:14px;
+      box-shadow:8px 8px 0 var(--ink); background:var(--card)}
+
+    .strip{display:flex; flex-wrap:wrap; gap:10px 28px; padding:22px 0; margin:20px 0 8px;
+      border-top:1.5px solid var(--ink); border-bottom:1.5px solid var(--ink); font-weight:600}
+    .strip span::before{content:""; display:inline-block; width:8px; height:8px; border-radius:2px;
+      background:var(--lit); margin-right:10px; vertical-align:middle}
+
+    h2{font-size:clamp(1.6rem,3.4vw,2.2rem); letter-spacing:-.025em; line-height:1.1; margin:64px 0 24px; font-weight:800}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .feat{background:var(--card); border:1.5px solid var(--line); border-radius:14px; padding:22px}
+    .feat .ic{width:40px; height:40px; border-radius:10px; display:grid; place-items:center;
+      background:var(--paper-2); color:var(--signal); margin-bottom:14px}
+    .feat .ic svg{width:20px; height:20px}
+    .feat h3{margin:0 0 6px; font-size:1.08rem; letter-spacing:-.01em}
+    .feat p{margin:0; color:var(--ink-2); font-size:.95rem}
+
+    .gallery{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .gallery figure{margin:0}
+    .gallery img{width:100%; height:auto; border:1.5px solid var(--line); border-radius:12px; display:block}
+    .gallery figcaption{font-size:.9rem; color:var(--ink-2); margin-top:8px}
+
+    table{width:100%; border-collapse:collapse; font-size:.97rem}
+    th,td{text-align:left; padding:13px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+    th{font-size:.8rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-2); font-weight:600}
+    td code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:.88em;
+      background:var(--paper-2); padding:2px 7px; border-radius:6px; word-break:break-all}
+    .table-wrap{overflow-x:auto}
+
+    .note{margin-top:20px; padding:16px 18px; border-left:4px solid var(--lit); background:var(--card);
+      border-radius:0 10px 10px 0; color:var(--ink-2); font-size:.95rem}
+    .support{margin-top:64px; padding:32px; border:1.5px solid var(--ink); border-radius:16px;
+      background:var(--card); display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between}
+    .support h2{margin:0 0 6px}
+    .support p{margin:0; color:var(--ink-2); max-width:34em}
+
+    footer{margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--ink-2);
+      font-size:.9rem; display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between}
+    footer a{color:var(--ink-2)}
+
+    @media (max-width:900px){
+      header{grid-template-columns:1fr; padding-top:32px; gap:36px}
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:560px){
+      .grid, .gallery{grid-template-columns:1fr}
+      nav .links a.hide-sm{display:none}
+      .shot{box-shadow:5px 5px 0 var(--ink)}
+      .support{padding:22px}
+      th:nth-child(3),td:nth-child(3){display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top" aria-label="Streezy">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#16181c"/><g transform="translate(14 14) scale(.5625)"><path d="M13 13L51 32L13 51Z" fill="none" stroke="#f2efe7" stroke-width="10" stroke-linejoin="round"/><rect x="2" y="2" width="22" height="22" rx="6" fill="#f2efe7"/><rect x="2" y="40" width="22" height="22" rx="6" fill="#f2efe7"/><rect x="40" y="21" width="22" height="22" rx="6" fill="#9bd33c"/><circle cx="51" cy="32" r="4.5" fill="#16181c"/></g></svg>
+        Streezy
+      </a>
+      <div class="links">
+        <a href="#features" class="hide-sm">Features</a>
+        <a href="#screens" class="hide-sm">Screens</a>
+        <a href="#download">Download</a>
+        <a href="privacy-policy.html">Privacy</a>
+      </div>
+    </nav>
+
+    <header id="top">
+      <div>
+        <span class="eyebrow">Free streaming app by zylio</span>
+        <h1>Go live everywhere.<br><em>Free.</em></h1>
+        <p class="lede">Stream to Twitch, YouTube, Kick and TikTok at the same time, horizontal and vertical,
+          on the engine behind OBS Studio. Set up in two minutes. No watermark, no subscription, no account.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/faisalrasheed442/streezy-releases/releases/latest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download Streezy
+          </a>
+          <a class="btn ghost" href="#features">See what it does</a>
+        </div>
+        <p class="platforms">Windows 10/11 · 64-bit · one installer</p>
+      </div>
+      <img class="shot" src="images/app-studio.png" width="1440" height="900"
+           alt="The Streezy Studio, live on four platforms at once, with a raid alert on screen and chat from every platform">
+    </header>
+
+    <div class="strip">
+      <span>Free forever</span><span>Every platform at once</span><span>No watermark</span><span>No account</span><span>OBS engine inside</span>
+    </div>
+
+    <h2 id="features">Everything a stream needs, already in the box</h2>
+    <section class="grid">
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1a10 10 0 0 1 0-14.2M19.1 4.9a10 10 0 0 1 0 14.2M7.8 16.2a6 6 0 0 1 0-8.4M16.2 7.8a6 6 0 0 1 0 8.4"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3>Every platform at once</h3>
+        <p>Twitch, YouTube, Kick, TikTok, Facebook, X and custom servers, each at the right quality for it, fitted to your upload.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="12" rx="2"/><rect x="17" y="3" width="5" height="18" rx="1.5"/></svg></div>
+        <h3>Horizontal and vertical</h3>
+        <p>A second 9:16 canvas with its own layouts for Shorts, TikTok and Reels, live alongside your normal stream.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4"/></svg></div>
+        <h3>Discord stays off stream</h3>
+        <p>Your mic goes live only when you press your game's voice key, or push to talk. Capture just the game's sound, not calls or music.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>Overlays you can bring</h3>
+        <p>Five built-in looks, or import any folder of HTML overlays, even kits made for OBS, with their control panels.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Chat and alerts built in</h3>
+        <p>Twitch, YouTube and Kick chat in one list, alerts for every kind of support, a chat bot, and a filter that holds suspicious links.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Hard to break</h3>
+        <p>The video engine runs on its own. If something crashes, it restarts in seconds and your stream reconnects by itself.</p>
+      </div>
+    </section>
+    <p class="note">Also in the box: clips with one key, crash-safe recordings with separate audio tracks, a report after every
+      stream, a phone remote, Stream Deck support, scene automation, OBS plugin and scene-collection support, a virtual camera,
+      mini mode, and Ctrl K to run any command.</p>
+
+    <h2 id="screens">See it</h2>
+    <section class="gallery">
+      <figure><img src="images/app-golive.png" width="1440" height="900" loading="lazy" alt="Go live with four destinations and pre-flight checks"><figcaption>Go live: every platform gets its own quality, and Streezy checks your keys, upload and mic first.</figcaption></figure>
+      <figure><img src="images/app-audio.png" width="1440" height="900" loading="lazy" alt="Audio settings with the mic following the game's voice key"><figcaption>Your mic follows your game's voice key, so Discord never reaches the stream.</figcaption></figure>
+      <figure><img src="images/app-kits.png" width="1440" height="900" loading="lazy" alt="An imported HTML overlay kit"><figcaption>Bring your own HTML overlay kit, with its control panel.</figcaption></figure>
+      <figure><img src="images/app-reports.png" width="1440" height="900" loading="lazy" alt="A stream report"><figcaption>A plain-language report after every stream.</figcaption></figure>
+    </section>
+
+    <h2 id="download">Download</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Platform</th><th>File</th><th>How</th></tr></thead>
+        <tbody>
+          <tr><td><b>Windows 10/11</b> (64-bit)</td><td><code>StreezySetup.exe</code></td><td>Run the installer. It sets up everything, including the virtual camera.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Windows may say “Windows protected your PC” because Streezy is not code-signed yet.
+      Choose <b>More info</b>, then <b>Run anyway</b>. Each release lists the installer's SHA-256 checksum in
+      <code>manifest.json</code>, and Streezy checks it before installing an update.</p>
+
+    <section class="support">
+      <div>
+        <h2>Built by one person</h2>
+        <p>Streezy is made by Faisal Malik at zylio, in the evenings. If it saved you a subscription,
+          you can chip in. Nothing is locked behind it, ever.</p>
+      </div>
+      <a class="btn ghost" href="https://www.patreon.com/zylio">Support on Patreon</a>
+    </section>
+
+    <footer>
+      <span>© 2026 zylio · Faisal Malik · GPL-3.0</span>
+      <span>
+        <a href="https://zylio.net/software/streezy">zylio.net</a> ·
+        <a href="https://github.com/faisalrasheed442/streezy-releases/releases">Releases</a> ·
+        <a href="privacy-policy.html">Privacy</a>
+      </span>
+    </footer>
+  </div>
+</body>
+</html>
