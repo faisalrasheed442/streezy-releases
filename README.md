@@ -67,7 +67,7 @@ Nothing. Streezy is free and stays free. Streaming to several platforms, vertica
 **Does it need an account?**
 No Streezy account, ever. You paste each platform's stream key once, or sign in with YouTube and Streezy fills in your key and sets
 your stream title for you. Keys and sign-ins are stored in Windows Credential Manager on your PC, never in a file or on a zylio server.
-YouTube sign-in is open to testers while Google reviews it; pasting a key works for everyone.
+YouTube sign-in is verified by Google. Pasting a stream key works for every platform.
 
 **Is it the same as OBS Studio?**
 Streezy runs on the OBS Studio engine (libobs), so capture, encoding and streaming are just as solid, and OBS plugins and scene collections work. The app around it is new: built for getting a first stream right, with multistreaming, alerts, chat and overlays built in.
