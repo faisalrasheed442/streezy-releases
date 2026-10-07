@@ -5,7 +5,7 @@ description: Everything you need to go live with Streezy, from installing it to 
 
 # Streezy user guide
 
-Streezy is a free app for live streaming on Windows. It runs on the same video engine as OBS Studio, so capture, encoding and streaming are just as reliable. Around that engine it adds a simpler window, a setup that builds everything for you, and multistreaming, alerts, chat and overlays out of the box.
+Streezy is a free live-streaming app for Windows. Underneath is OBS Studio's video engine, so capture and encoding are the same code OBS uses. What's different is everything around it: a simpler window, a setup that builds your scenes for you, and multistreaming, alerts, chat and overlays that work without plugins.
 
 This guide takes you from nothing to your first stream, then explains every part of the app. If you have never streamed before, read **Part 1** and **Part 3** first. The rest is there when you need it.
 
@@ -64,7 +64,7 @@ In the pictures, **blue numbered boxes** show what to click. The numbers match t
 
 ## 1. What you need
 
-- **A Windows PC:** Windows 10 (version 1809 or newer) or Windows 11, 64-bit.
+- **A Windows PC:** Windows 10 (version 1809 or newer) or Windows 11, 64-bit. There's no Mac or Linux version.
 - **A graphics card is recommended.** Streezy uses NVIDIA, AMD or Intel graphics to encode your stream, which leaves your processor free for games. Without one it still works, using the processor.
 - **Internet upload speed.** Each platform needs about 2.5 to 12 Mbps of *upload*, depending on quality. Streezy measures yours during setup and picks a quality that fits.
 - **An account on the platform you want to stream to**, such as Twitch, YouTube, Kick, Facebook, TikTok or X. Streezy itself needs no account.
@@ -74,7 +74,7 @@ In the pictures, **blue numbered boxes** show what to click. The numbers match t
 
 1. Download **StreezySetup.exe** from [zylio.net/software/streezy](https://zylio.net/software/streezy) or from the [releases page](https://github.com/faisalrasheed442/streezy-releases/releases/latest). It is one file; everything Streezy needs is inside it.
 2. Open the file. Windows asks for permission to install, because Streezy also installs its virtual camera. Click **Yes**.
-3. If Windows shows **"Windows protected your PC"**, click **More info**, then **Run anyway**. Windows shows this for new apps it has not seen many times yet.
+3. If Windows shows **"Windows protected your PC"**, click **More info**, then **Run anyway**. Streezy's installer isn't code-signed yet, and SmartScreen warns about unsigned apps until enough people have run them.
 4. Follow the installer. You can tick **Create a desktop shortcut**.
 5. On the last page, leave **Launch Streezy** ticked and click **Finish**.
 
@@ -149,7 +149,7 @@ Whichever card you pick, you get these scenes: **Starting soon**, your main scen
 
 ![Setup step 7: who hears your mic?](images/setup-7-who-hears.png)
 
-Streezy can keep your Discord or party chat off stream. That is one of the most common problems new streamers have.
+This is the step that keeps your Discord or party chat off stream. Viewers hearing a private call is one of the most common first-stream mistakes, and it's easy to miss, because you never hear your own stream.
 
 1. Choose when viewers hear your mic:
    - **Always on:** viewers hear you all the time.
@@ -882,7 +882,7 @@ Each problem comes with a button that fixes it or takes you to the right place.
 
 ## 31. Privacy and where your files are
 
-- **No account, no analytics, no tracking.** Streezy doesn't send anything about you anywhere.
+- **No account, no analytics, no tracking.** Streezy connects only to what you set up: the platforms you stream to, the chats you add, Google if you sign in with YouTube, Cloudflare's speed test when you run the check, and GitHub once at start-up to look for an update.
 - **Stream keys and sign-ins** are kept in Windows Credential Manager on your PC, never in a file, and never sent to zylio.
 - **Overlays** only answer your own PC. The **phone remote** needs your PIN, and the **remote port** for Stream Deck and OBS tools needs its password.
 - **Reading chat** connects straight to Twitch, YouTube and Kick, the way their websites do.
@@ -920,4 +920,4 @@ Read the full privacy policy at [zylio.net/privacy](https://zylio.net/privacy#st
 - **Website:** [zylio.net/software/streezy](https://zylio.net/software/streezy)
 - **Downloads and what's new:** [the releases page](https://github.com/faisalrasheed442/streezy-releases/releases)
 
-Streezy is free and stays free. It is made by zylio and built on OBS Studio's engine. Thank you to everyone who builds OBS.
+Streezy is free and stays free. It's made by one person at zylio, on top of the engine the OBS Studio project has spent more than ten years building. Thank you to everyone who works on OBS.
