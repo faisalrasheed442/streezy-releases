@@ -8,6 +8,8 @@ vertical at once. It's set up in two minutes, with no watermark, no subscription
 
 ![The Streezy Studio, live on four platforms at once, with a raid alert on screen and chat from every platform](images/app-studio.png)
 
+**New to streaming?** The [step-by-step user guide](guide/streezy-guide.md) takes you from installing Streezy to your first stream, with a picture for every step.
+
 ---
 
 ## Key features
