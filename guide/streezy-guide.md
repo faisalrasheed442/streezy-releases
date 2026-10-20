@@ -131,8 +131,11 @@ You can skip this step and add platforms later in **Accounts**. Without any, you
 
 1. Pick the card that fits, for example **Games**: your game full screen, your webcam in a corner, and alerts.
 2. Or **Just chatting** for a big webcam with chat on screen. There are also cards for art, music, talk shows, and coding or tutorials.
-3. Under **Also stream vertical for Shorts, TikTok and Reels?**, choose **Horizontal and vertical** if you also want a 9:16 phone-shaped stream (see [Part 4](#part-4-horizontal-and-vertical)). Otherwise leave **Horizontal only**.
-4. Click **Next**.
+3. **Horizontal (16:9)** is the normal widescreen picture for Twitch, YouTube, Kick, Facebook and X.
+4. **Vertical (9:16)** is the upright phone picture for YouTube Shorts, TikTok and Reels.
+
+   Turn on either one or both (see [Part 4](#part-4-horizontal-and-vertical)). One always stays on: if you turn off the last one, the other switches on.
+5. Click **Next**.
 
 Whichever card you pick, you get these scenes: **Starting soon**, your main scene, **Be right back** and **Ending**. Each is filled with overlays that follow your name and colour.
 
@@ -611,24 +614,38 @@ When the stream ends, Streezy opens its **report** (see [section 20](#20-stream-
 
 ## 17. Stream vertical for Shorts, TikTok and Reels
 
-Phones show video upright (9:16). Streezy can stream a **second, vertical picture** at the same time as your normal horizontal one, each with its own layout. For example, your game on Twitch and a phone-friendly layout on TikTok, live at the same moment.
+Phones show video upright (9:16). Streezy can stream:
+- **horizontal only:** the normal widescreen picture,
+- **vertical only:** just the upright picture, for example only TikTok or YouTube Shorts,
+- **or both at once**, each with its own layout. For example, your game on Twitch and a phone-friendly layout on TikTok, live at the same moment.
 
-### Turn it on
+### Choose what you stream
 
-Do any one of these:
-- In setup, choose **Horizontal and vertical**.
-- In **Settings > Video**, switch on **Vertical canvas**.
-- Add a destination with **Picture: Vertical (9:16)**, such as TikTok or YouTube Shorts.
+Open **Settings > Video**. In setup you get the same two switches.
 
 ![Settings: Video](images/settings-video.png)
 
-1. **Vertical canvas:** a second 9:16 canvas for YouTube Shorts, TikTok and Reels.
-2. **Vertical follows your scenes:** when you switch your horizontal scene, the matching vertical scene switches too. Shorts viewers see *Be right back* when everyone else does.
-3. Above them, **Size** and **Frame rate** set your main canvas. 1920×1080 at 60 fps suits almost everyone. Click **Apply canvas** after a change.
+1. **Horizontal (16:9):** the widescreen picture for Twitch, YouTube, Kick, Facebook and X.
+2. **Vertical (9:16):** the upright picture for YouTube Shorts, TikTok and Reels.
+3. **Vertical follows your scenes** (only shown when both are on): when you switch your horizontal scene, the matching vertical scene switches too. Shorts viewers see *Be right back* when everyone else does.
+4. **Apply canvas** saves a change to the **Size** and **Frame rate** above. 1920×1080 at 60 fps suits almost everyone.
 
-When you turn it on, Streezy builds a vertical version of each of your scenes.
+One of the two always stays on. If you turn off the last one, the other switches on. When vertical is turned on, Streezy builds a vertical version of each of your scenes.
 
-### Work with both
+Adding a destination whose **Picture** is **Vertical (9:16)**, such as TikTok or YouTube Shorts, also turns vertical on.
+
+### Vertical only
+
+With **Horizontal** off:
+- The Studio shows only your 9:16 preview and your vertical scenes. Build them the same way as horizontal ones.
+- Overlays and alerts you add from the Overlays and Alerts pages go into your vertical scenes.
+- New destinations start as **Vertical (9:16)**.
+- In **Go live**, horizontal destinations show *horizontal is off* and sit the stream out, so only your vertical platforms go live.
+- **Studio mode** isn't available, because it works on the horizontal picture. You use Easy mode.
+
+Your sound still works as normal: the vertical stream uses the same mic and PC sound.
+
+### Both at once
 
 ![The Studio with horizontal and vertical](images/vertical-studio.png)
 
@@ -636,7 +653,7 @@ When you turn it on, Streezy builds a vertical version of each of your scenes.
 2. **The vertical preview** shows what phone viewers see. Arrange things in it the same way as in the main preview.
 3. **16:9 / 9:16** above the sources chooses which canvas's sources you are editing.
 
-To put something you already have onto the vertical canvas, right-click it and choose **Also show in Vertical**.
+To put something you already have onto the vertical canvas, right-click it and choose **Also show in Vertical**. Overlays and alerts added from the Overlays and Alerts pages go to whichever tab the Studio is on.
 
 **Sound** always comes from the horizontal canvas, and both streams use it.
 
