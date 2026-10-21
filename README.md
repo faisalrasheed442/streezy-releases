@@ -20,11 +20,11 @@ vertical at once. It's set up in two minutes, with no watermark, no subscription
 | 📱 **Horizontal and vertical together** | A second 9:16 canvas with its own layouts for Shorts, TikTok and Reels, streamed alongside your normal one. |
 | ⚡ **Two-minute setup** | The setup checks your PC and internet, suggests a quality, and builds your scenes: Starting soon, your main scene, Be right back and Ending, with overlays and alerts. |
 | 🎙️ **Your mic, your call** | Always on, push to talk, off stream, or **only when you press your game's own voice key**. Talk to friends on Discord without viewers hearing, and capture just your game so calls and music stay off stream. |
-| 🎨 **Overlays** | Five built-in looks that follow your name and colour. Import **any folder of HTML overlays**, including kits made for OBS. Their control panels open in Streezy, and the event bridge sends them your follows, subs, raids and tips. |
+| 🎨 **Overlays** | 20 built-in overlays in 25 looks that follow your name and colour, and **24 game themes** (120 overlays) for the games you stream: type your game's name to find yours. Import **any folder of HTML overlays**, including kits made for OBS. Their control panels open in Streezy, and the event bridge sends them your follows, subs, raids and tips. |
 | 💬 **Chat and alerts** | Twitch, YouTube and Kick chat in one list, with no sign-in needed to read it. Alerts for follows, subs, gifts, raids, bits, Super Chats, members and tips. Includes a chat bot, link holding and blocked words. |
 | ✂️ **Clips and recordings** | One key saves the last moments as a clip. Recordings are crash-safe MP4 with separate audio tracks for editing. |
 | 📊 **Stream reports** | After every stream: dropped frames, chat, new followers, the bitrate each platform received, and plain-language advice. |
-| 🕹️ **Remote control** | A phone remote over Wi-Fi (scan a QR code, type a PIN). Stream Deck, Touch Portal, Streamer.bot and other OBS tools work too: Streezy speaks the OBS remote protocol. |
+| 🕹️ **Remote control** | A phone remote like a stream deck, over Wi-Fi (scan a QR code, type a PIN): a key for every scene, mic, camera, record, clip and be right back, plus sound sliders and chat. Stream Deck, Touch Portal, Streamer.bot and other OBS tools work too: Streezy speaks the OBS remote protocol. |
 | 🤖 **Automate** | Switch scenes when a game comes to the front, show Be right back when you step away, and open on Starting soon. |
 | 🧩 **OBS compatible** | Import your OBS scene collections, and use OBS source and filter plugins. |
 | 🛡️ **Hard to break** | The video engine runs in its own process. If a plugin or capture crashes, it restarts in seconds and your stream reconnects. The window never closes on you. |
