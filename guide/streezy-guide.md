@@ -453,7 +453,7 @@ and the socials rotator, viewers and clock, recent events, a framed webcam and t
 
 ## 10. Game themes
 
-A **game theme** is a set of five overlays drawn for the kind of game you play: **Starting soon**, **Be right back**, **Ending**, a **webcam frame** and **alerts**. There are 24, from tactical shooters to cozy farming games. The art is Streezy's own: no game's logo, characters or artwork are used.
+A **game theme** is a set of five overlays drawn for the kind of game you play: **Starting soon**, **Be right back**, **Ending**, a **webcam frame** and **alerts**. There are 26, from tactical shooters to cozy farming games. The art is Streezy's own: no game's logo, characters or artwork are used.
 
 ![Look: Game themes](images/look-game-themes.png)
 
@@ -461,7 +461,7 @@ A **game theme** is a set of five overlays drawn for the kind of game you play: 
 2. **Find your game:** type its name.
 3. **Click a theme** to see its five pieces.
 
-The search understands the names people really type, short or long: *valorant*, *cs2*, *fortnite*, *pubg*, *bgmi*, *free fire*, *cod*, *warzone*, *apex*, *lol*, *dota*, *minecraft*, *roblox*, *gta*, *rdr2*, *f1*, *forza*, *rocket league*, *fifa*, *fc 25*, *nba 2k*, *dbd*, *phasmo*, *elden ring*, *wow*, *genshin*, *tekken*, *among us*, *rust*, *stardew*, *sea of thieves*, *destiny*, *hearthstone* and many more. A kind of game works too: *shooter*, *racing*, *horror*, *football*.
+The search understands the names people really type, short or long: *valorant*, *cs2*, *fortnite*, *pubg*, *bgmi*, *free fire*, *cod*, *warzone*, *apex*, *lol*, *dota*, *minecraft*, *roblox*, *gta*, *gta 6*, *gta online*, *rdr2*, *f1*, *forza*, *rocket league*, *fifa*, *fc 25*, *nba 2k*, *dbd*, *phasmo*, *elden ring*, *wow*, *genshin*, *tekken*, *among us*, *rust*, *stardew*, *sea of thieves*, *destiny*, *hearthstone* and many more. A kind of game works too: *shooter*, *racing*, *horror*, *football*.
 
 ![Searching for a game](images/look-game-search.png)
 
@@ -478,7 +478,9 @@ The search understands the names people really type, short or long: *valorant*, 
 | Legends | Apex Legends, Overwatch, Marvel Rivals |
 | Rift | League of Legends, Dota 2, Mobile Legends |
 | Blocks | Minecraft, Roblox |
-| City life | GTA V, GTA RP, Red Dead |
+| Neon coast | GTA 6 |
+| Heist | GTA 5, GTA Online |
+| City life | GTA RP, GTA V, Red Dead |
 | Turbo | Forza, F1, Gran Turismo |
 | Rocket ball | Rocket League |
 | Matchday | EA FC, eFootball |
@@ -503,11 +505,15 @@ The search understands the names people really type, short or long: *valorant*, 
 1. **Click a picture** to watch that piece move in your web browser, with a countdown and sample alerts.
 2. **Add** puts one piece into the scene you are on. If that scene already has a screen or alerts of the same kind, the older one is hidden (not deleted), so two never sit on top of each other.
 3. The **webcam frame** goes round your webcam, wherever it is in the scene.
-4. **Set up my scenes with it** does the whole job at once:
+   Once a piece is in the scene, its button turns green and reads **✓ Added**; pieces you already use in other scenes read **✓ In use**.
+4. **Use this theme in all my scenes** does the whole job at once. First it lists each scene and what it will get, and nothing changes until you press **Use theme**:
    - **Starting soon**, **Be right back** and **Ending** go into the scenes with those names (Streezy also understands *intro*, *brb*, *break*, *outro* and the like),
    - the **alerts** go into every other scene,
    - the **webcam frame** goes round the camera in every scene that has one,
    - and the older screens, alerts and frames in those scenes are hidden, not deleted. Switch them back on under **In this scene** if you change your mind.
+
+   Afterwards the button reads **✓ Using this theme in 5 scenes** (or however many you have).
+5. **Countdowns** at the bottom shows how long Starting soon and Be right back count down. Click it to change them ([section 12](#12-your-details)).
 
 The theme's names and colours follow **Your details** ([section 12](#12-your-details)), like every overlay.
 
@@ -566,11 +572,19 @@ Fill these in once and every overlay and game theme uses them. Open **Look > You
 1. **Channel name:** shown on your screens and name tag.
 2. **Socials:** your handles, separated by commas, for example `@you on TikTok, discord.gg/you`.
 3. **Colour:** the accent colour of your overlays. The last circle lets you pick any colour.
-4. **Stream title:** what today's stream is about. **Go live** asks for it too.
-5. **Goal:** a label and numbers for the goal bar, for example *Follower goal 864 of 1000*.
-6. **More details** opens the title, the **Be right back message**, **Next stream** (shown on the Ending screen, for example "Next stream: Friday 8 pm"), the **Technical difficulties message** and the goal. **Fewer details** closes them again.
+4. **Starting soon countdown:** how many minutes it counts down, or a time to count down to, such as *20:30*.
+5. **Be right back timer:** how many minutes it counts down.
+6. **Start again now** restarts that countdown on every screen showing it, even while you are live.
+7. **More details** opens the rest. **Fewer details** closes them again.
+   - **Stream title:** what today's stream is about. **Go live** asks for it too.
+   - **Be right back message.**
+   - **Next stream:** shown on the Ending screen, for example "Next stream: Friday 8 pm".
+   - **Technical difficulties message.**
+   - **Goal:** a label and numbers for the goal bar, for example *Follower goal 864 of 1000*.
 
 Changes save as you type, and overlays update straight away, even while you are live.
+
+> **Countdowns** work on every Starting soon and Be right back screen: the built-in looks and all the game themes. A countdown starts again each time its scene comes on screen. You can also right-click a countdown in the Stream page preview for **Countdown length…** and **Start the countdown again**.
 
 ## 13. Alerts
 
