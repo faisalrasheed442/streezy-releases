@@ -34,9 +34,11 @@ vertical at once. It's set up in two minutes, with no watermark, no subscription
 
 ## Screenshots
 
-<img src="images/app-golive.png" width="49%" alt="Go live: four destinations, each with its own quality, and the checks Streezy runs first"> <img src="images/app-audio.png" width="49%" alt="Audio: the mic follows the game's voice key, so Discord never reaches the stream">
+<img src="images/app-golive.png" width="49%" alt="Go live: four destinations, each with its own quality, and the checks Streezy runs first"> <img src="images/app-audio.png" width="49%" alt="Sound: the mic follows the game's voice key, so Discord never reaches the stream">
 
-<img src="images/app-studio-mode.png" width="49%" alt="Studio mode: set up the next scene while viewers watch the current one"> <img src="images/app-chat.png" width="49%" alt="Twitch, YouTube and Kick chat in one list">
+<img src="images/app-themes.png" width="49%" alt="Game themes: 24 sets of overlays drawn for the games people stream"> <img src="images/app-styles.png" width="49%" alt="25 looks for the built-in overlays">
+
+<img src="images/app-chat.png" width="49%" alt="Twitch, YouTube and Kick chat in one list"> <img src="images/app-clips.png" width="49%" alt="Clips, recordings and stream reports">
 
 <img src="images/app-overlays.png" width="49%" alt="Built-in overlay looks and your details"> <img src="images/app-kits.png" width="49%" alt="An imported HTML overlay kit with its control panel">
 
@@ -44,7 +46,7 @@ vertical at once. It's set up in two minutes, with no watermark, no subscription
 
 <img src="images/app-quality.png" width="49%" alt="The PC and internet check with the suggested quality"> <img src="images/app-reports.png" width="49%" alt="A stream report with the bitrate each platform received">
 
-<img src="images/app-remote.png" width="49%" alt="The phone remote and the Stream Deck connection details"> <img src="images/app-studio-dark.png" width="49%" alt="The Studio in the dark theme">
+<img src="images/app-remote.png" width="49%" alt="The phone remote and the Stream Deck connection details"> <img src="images/app-studio-dark.png" width="49%" alt="The Stream page in the dark theme">
 
 ---
 
