@@ -251,6 +251,7 @@ A **scene** is one screen layout. Typical scenes are *Starting soon*, *Gameplay*
 2. **New** adds a scene. Type a name and press Enter.
 3. The line next to **Scenes** reminds you that the keys **1** to **9** switch scenes while Streezy is in front.
 4. **Widescreen / Vertical** chooses whose scenes you are looking at. It only appears when vertical is on (see [Part 4](#part-4-widescreen-and-vertical)).
+5. **Hide** folds the scene cards away so the preview gets the room; **Show** brings them back. Streezy remembers which you chose, and the number keys still switch scenes while they are hidden.
 
 **Right-click a scene card** (or press its **⋯**) for more:
 
@@ -272,14 +273,15 @@ A **source** is anything inside a scene: your game, webcam, a picture, an overla
 ![In this scene: sources and sound](images/sources-panel.png)
 
 1. **The switch** shows or hides a source. Items higher in the list are drawn on top.
-2. Hover over a row for the **padlock**, which locks it in place…
-3. …and **⋯**, the same menu you get by right-clicking it (see [section 7](#7-arrange-things-in-the-preview)).
-4. **Add a game, camera or overlay** puts something new into the scene.
-5. Under **Sound**, a **slider** for your mic, your PC sound and any apps you added…
-6. …with a **mute** button each. The line next to **Mic** says when viewers hear it, for example *with your talk key T*.
-7. **More** opens **Settings > Sound**. That is also where the sound of overlays and web pages is.
+2. **Edit** opens its settings. For a web page or overlay that is its address, size, frame rate and **Custom CSS**, where you can restyle it (fonts, colours, hiding parts of it) with your own CSS.
+3. Hover over a row for the **padlock**, which locks it in place…
+4. …and **⋯**, the same menu you get by right-clicking it (see [section 7](#7-arrange-things-in-the-preview)).
+5. **Add a game, camera or overlay** puts something new into the scene.
+6. Under **Sound**, a **slider** for your mic, your PC sound and any apps you added…
+7. …with a **mute** button each. The line next to **Mic** says when viewers hear it, for example *with your talk key T*.
+8. **More** opens **Settings > Sound**. That is also where the sound of overlays and web pages is.
 
-Double-click a source to open its settings.
+Double-clicking a source opens its settings too.
 
 ### Adding a source
 
@@ -350,7 +352,7 @@ Then:
 
 ![Right-click menu of a source](images/sources-menu.png)
 
-1. **Settings…**
+1. **Edit settings…** (for a web page: **Edit: address, size, custom CSS…**)
 2. **Filters (picture)…** (and **Audio filters…** for anything with sound).
 3. **Size and position** opens a list…
 4. …that starts with the four corners: **Top left corner**, **Top right corner**, **Bottom left corner** and **Bottom right corner** move it there with a small margin. Below them are **Fit to screen**, **Fill the screen**, **Stretch to screen**, **Centre** and **Reset size**.
