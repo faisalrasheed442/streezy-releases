@@ -314,6 +314,18 @@ Streezy also helps with a few common situations:
 - **Adding App audio when PC sound is set to Everything** shows a warning, because that app would be heard twice.
 - **A screen capture with no monitor picked** shows your main screen.
 
+### Video and sound files
+
+A **Video or sound file** plays over and over while its scene is on air. Its row in **In this scene** shows where it is
+(*Playing 0:12 / 0:45*, *Paused*, *Ended*) and has a **play / pause** button. Right-click it and open **Play** for:
+- **Play from the start**.
+- **Play over and over (loop)**: switch it off to play the file once.
+- **Start from the beginning when its scene is shown**: on (normal), an intro or music starts again each time you
+  switch to its scene. Off, it pauses while its scene is off air and carries on where it was when you come back.
+
+Its sound is on stream on both the horizontal and the vertical canvas. To hear it yourself too, set it to
+**You and viewers** in **Settings > Sound**.
+
 ### Source settings
 
 ![The settings window of a source](images/source-settings.png)
@@ -400,6 +412,9 @@ To add music as well, press **Add a game, camera or overlay > App audio** on the
 4. **Stream / Mic / Game / Other:** which recording tracks the sound goes to (see [section 23](#23-recording-and-clips)).
 5. **Filters:** noise removal, compressor, EQ.
 6. **Your headphones** chooses where "only you" sounds play.
+
+Scrolling the page with the mouse wheel never changes a box or slider on the way. To change one with the wheel, click
+it first.
 
 > **Hearing something twice?** If PC sound is set to **Everything** and you also added an app with **App audio**, that app plays twice. Streezy warns you about this. Either switch PC sound to **Only my game**, or remove the extra source.
 
