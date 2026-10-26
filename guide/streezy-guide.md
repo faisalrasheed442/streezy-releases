@@ -817,7 +817,7 @@ If you signed in with YouTube, the card has YouTube options too:
 
 ![The Go live card with YouTube options](images/golive-youtube.png)
 
-1. **YouTube details** opens them. The line under it says which channel you go live on.
+1. **Edit this live's details** opens them. Folded away, the line under it shows what they are set to now (for example *Private · Gaming · no thumbnail*); open, the first line says which channel you go live on.
 2. **Public**, **Unlisted** or **Private.**
 3. **Made for kids**, then a description, tags, a category and a thumbnail below.
 4. **Go live.**
