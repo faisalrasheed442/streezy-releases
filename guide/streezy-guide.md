@@ -273,9 +273,9 @@ A **source** is anything inside a scene: your game, webcam, a picture, an overla
 ![In this scene: sources and sound](images/sources-panel.png)
 
 1. **The switch** shows or hides a source. Items higher in the list are drawn on top.
-2. **Edit** opens its settings. For a web page or overlay that is its address, size, frame rate and **Custom CSS**, where you can restyle it (fonts, colours, hiding parts of it) with your own CSS.
-3. Hover over a row for the **padlock**, which locks it in place…
-4. …and **⋯**, the same menu you get by right-clicking it (see [section 7](#7-arrange-things-in-the-preview)).
+2. **The pencil (Edit)** opens its settings. For a web page or overlay that is its address, size, frame rate and **Custom CSS**, where you can restyle it (fonts, colours, hiding parts of it) with your own CSS.
+3. A **padlock** shows on a source you locked in place; press it to unlock. Lock one from **⋯**…
+4. …**⋯** is the same menu you get by right-clicking it (see [section 7](#7-arrange-things-in-the-preview)).
 5. **Add a game, camera or overlay** puts something new into the scene.
 6. Under **Sound**, a **slider** for your mic, your PC sound and any apps you added…
 7. …with a **mute** button each. The line next to **Mic** says when viewers hear it, for example *with your talk key T*.
